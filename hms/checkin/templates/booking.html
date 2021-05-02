@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Booking Details</title>  
+</head>  
+<body>  
+<h2>Hotel XYZ Booking Details Page</h2> 
+<div>
+    <h2>Guest Details</h2>
+    <table border="1" width="1500">
+        <tr >
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td>Address</td>
+            <td>Room Type</td>
+            <td>Checkin Date</td>
+            <td>Checkout Date</td>
+            <td>Reservation Status</td>
+            <td>ID Proof</td>
+        </tr>
+
+        {% for gds in gd %}
+        <tr>
+            <td>{{ gds.name }}</td>
+            <td>{{ gds.email }}</td>
+            <td>{{ gds.ph_no }}</td>
+            <td>{{ gds.address }}</td>
+            <td>{{ gds.room_type }}</td>
+            <td>{{ gds.checkin }}</td>
+            <td>{{ gds.checkout }}</td>
+            <td>{{ gds.reservation_status }}</td>
+            <td><img src="{{ gds.id_proof }}"></td>
+
+
+            
+        </tr>
+        {% endfor %}
+
+    </table>
+    <button style="margin-top:20px"><a href="{% url 'update' %}">UPDATE</a></button>
+</div>
+</body>  
+</html>  

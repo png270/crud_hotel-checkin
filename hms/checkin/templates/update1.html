@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Booking Update</title>  
+</head>  
+<body>  
+<h2>Hotel XYZ Update Booking Details</h2> 
+<div>
+    <form action="", method="POST">
+        {% csrf_token %}
+        <p>
+        Enter Guest Details:<br>
+        Name: <input type="text" name="name"/> <br>
+        Phone No. : <input type="text" name="phno"/> <br>
+        
+        
+        
+        Address: <input type="text" name="add"/> <br>
+        
+        
+        
+        
+        Room Type: <select id="room-type" name="type"> 
+            <option value="Premium">Premium</option>
+            <option value="Suite">Suite</option>
+            <option value="Excecutive">Executive</option>
+          </select><br>
+        
+        Reservation Status: <label>Confirmed</label><br>
+        <input type="checkbox" id="Yes" name="status" value="Yes">Yes
+        <input type="checkbox" id="No" name="status1" value="No">No
+        <br>
+        
+        Checkin Date: <input type="date" id="start" name="in_date"
+        value="2021-07-22"
+        min="2018-01-01" max="2021-12-31"><br>
+        
+        Checkout Date: <input type="date" id="start" name="out_date"
+        value="2021-07-22"
+        min="2018-01-01" max="2021-12-31"><br>
+        
+        Room No: <input type="number" name="roomno">
+
+
+        <input type="submit" value="UPDATE"/>
+
+       
+
+        </p>
+    </form>
+</div>
+</body>  
+</html>  
