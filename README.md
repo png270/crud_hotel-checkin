@@ -1,1 +1,1 @@
-CRUD Operation - Hotel CHeckin System using Django
+CRUD Operations - Hotel CHeckin System using Django
